@@ -1,4 +1,4 @@
-﻿namespace DependencyInjection;
+﻿namespace HighCoupling;
 
 public class UserInterface
 {
@@ -21,25 +21,25 @@ public class UserInterface
         GetData();
 
         Bussiness biz = new Bussiness();
-        biz.SingUp(_username, _password);
+        biz.SignUp(_username, _password);
     }
 }
 
 public class Bussiness
 {
-    public void SingUp(string? username, string? password)
+    public void SignUp(string? username, string? password)
     {
         //MySqlDataAccess db = new MySqlDataAccess();
         //db.SingUp(username, password);
 
         OracleDataAccess o = new OracleDataAccess();   //here I am changing the code in main codebase
-        o.SingUp(username, password);
+        o.SignUp(username, password);
     }
 }
 
 public class MySqlDataAccess
 {
-    public void SingUp(string? username, string? password)
+    public void SignUp(string? username, string? password)
     {
         Console.WriteLine("MySql - " + username + " " + password);
     }
@@ -47,7 +47,7 @@ public class MySqlDataAccess
 
 public class OracleDataAccess
 {
-    public void SingUp(string? username, string? password)
+    public void SignUp(string? username, string? password)
     {
         Console.WriteLine("Oracel - " + username + " " + password);
     }
@@ -56,4 +56,6 @@ public class OracleDataAccess
 
 //HighDependency
 //Solution 1 - we replace concrete class with an interface that demonstrates the methods, properties and
-                //method signatures of concrete class
+                //method signatures of concrete class. So one concrete class can be work with another class's Interface.
+                // Now everytime we want to actually do something in the concerte class, dependency injection will come into play
+                // and we'll create an instance of that concrete class and then makes a call to the actual method inside that concrete class
