@@ -54,7 +54,7 @@ public class OracleDataAccess
 }
 
 
-//HighDependency
+//HighDependency - In this program we are seeing high coupling where classes are dependent on other classes.
 //Solution 1 - we replace concrete class with an interface that demonstrates the methods, properties and
                 //method signatures of concrete class. So one concrete class can be work with another class's Interface.
                 // Now everytime we want to actually do something in the concerte class, dependency injection will come into play
