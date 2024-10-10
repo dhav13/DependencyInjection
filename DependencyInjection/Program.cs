@@ -11,7 +11,7 @@
 
 
 //Basic-DI
-BasicDI.IDataAccess da = new BasicDI.OracleDataAccess();
-BasicDI.IBussiness biz = new BasicDI.Business(da);
-BasicDI.UserInterface ui = new BasicDI.UserInterface(biz);
-ui.SignUp();
+//BasicDI.IDataAccess da = new BasicDI.OracleDataAccess();
+//BasicDI.IBussiness biz = new BasicDI.Business(da);
+//BasicDI.UserInterface ui = new BasicDI.UserInterface(biz);
+//ui.SignUp();

@@ -82,7 +82,7 @@ public class OracleDataAccess : IDataAccess
 //}
 
 //By doing this we not using new stmt inside the concrete classess anymore, but then if we are not using this new stmt, how do we instaniate
-////these two classes? We do this outside the classess in the main program.{check program.cs file}
+//these two classes? -->  We do this outside the classess in the main program.{check program.cs file}
 //So, we have moved all the new stmt to the main program and we just pass the instances to the concrete classes, so they don't need to instantiate
-////the dependency classess inside their constructore.
+//the dependency classess inside their constructore.
 //----------This technique is called "CONSTRUCTOR INJECTION" ---------------//
