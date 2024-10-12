@@ -5,8 +5,6 @@ public class UserInterface
     public string? _username;
     public string? _password;
 
-
-
     public void GetData()
     {
         Console.Write("UserName: ");

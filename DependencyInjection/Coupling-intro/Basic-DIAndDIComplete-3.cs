@@ -1,5 +1,5 @@
 ﻿
-namespace BasicDI;
+namespace BasicDIAndDIComplete;
 public class UserInterface
 {
     public string? _username;
